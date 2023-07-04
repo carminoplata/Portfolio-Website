@@ -6,6 +6,7 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import Certificates from './Certificates'
 
 import "./about.css";
 
@@ -23,10 +24,9 @@ function About() {
             }}
           >
             <h1
-              style={{ fontSize: "2.1em", paddingBottom: "20px" }}
-              data-aos="fade-right"
-            >
-              <span className="primary-header">Who</span> I'M
+              style={{ fontSize: "1.5rem", paddingBottom: "20px" }}
+              data-aos="fade-right">
+              <span className="primary-header">Bio</span> 
             </h1>
             <div data-aos="fade-up">
               <Aboutcard />
@@ -46,7 +46,7 @@ function About() {
           </Col>
         </Row>
         <h1 data-aos="fade-right">
-          <span className="primary-header">Skillset</span> I Work With
+          <span className="primary-header">Tech Stack</span>
         </h1>
 
         <div data-aos="fade-up">
@@ -59,8 +59,16 @@ function About() {
         <div data-aos="fade-up">
           <Toolstack data-aos="fade-up" />
         </div>
+        
+        <h1 data-aos="fade-right">
+          <span className="primary-header">Certificates</span>
+        </h1>
 
-        <Github />
+        <div data-aos="fade-up">
+          <Certificates />
+        </div>
+
+        <Github hidden/>
       </Container>
       <ScrollToTop />
     </Container>

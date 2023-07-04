@@ -104,7 +104,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
+            <Nav.Item hidden>
               <Nav.Link
                 href="https://blog.rahuljha.tech/"
                 target="_blank"

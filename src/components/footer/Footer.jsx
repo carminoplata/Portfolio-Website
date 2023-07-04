@@ -13,10 +13,10 @@ function Footer() {
   return (
     <Container fluid className="footer">
       <Row>
-        <Col md="4" className="footer-copywright"></Col>
-        <Col md="4" className="footer-copywright">
+        <Col md="4" className="footer-copyright"></Col>
+        <Col md="4" className="footer-copyright">
           <span>
-            Designed and Developed by{" "}
+            Designed by{" "}
             <i className="primary-header">Rahul Jha</i>
           </span>
         </Col>
@@ -26,7 +26,7 @@ function Footer() {
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="github"
-                href="https://github.com/Rahuljha4171"
+                href="https://github.com/carminoplata"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="github"
@@ -34,7 +34,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">
+            <li className="social-icons" hidden>
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="twitter"
@@ -50,7 +50,7 @@ function Footer() {
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="email"
-                href="mailto:rahuljha4171@outlook.com"
+                href="mailto:carmine.sacco91@icloud.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="email"
@@ -62,7 +62,7 @@ function Footer() {
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="linkedin"
-                href="https://www.linkedin.com/in/Rahuljha4171/"
+                href="https://www.linkedin.com/in/carmine-sacco/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="linkedin"
@@ -74,7 +74,7 @@ function Footer() {
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="instagram"
-                href="https://www.instagram.com/dead.programmer/"
+                href="https://www.instagram.com/carminoplata/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="instagram"

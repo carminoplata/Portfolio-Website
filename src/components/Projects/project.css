@@ -5,13 +5,21 @@
   background-color: var(--clr-bg) !important;
 }
 
+.Fluorescent-Blue{
+  color: var(--clr-primary) !important;
+}
+
+.company-item{
+  width: 100%;
+}
 .project-card {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
 
   padding-left: 25px !important;
   padding-right: 25px !important;
-  height: auto !important;
+  
+  overflow: hidden;
 }
 
 .project-card-view {
@@ -21,6 +29,28 @@
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
+
+.dark-mode .project-card-view{
+  background: white !important;
+  color: var(--clr-bg) !important;
+}
+
+.dark-mode .btn-primary{
+  color: var(--clr-bg) !important;
+  background-color: var(--clr-primary) !important;
+}
+
+.dark-mode .btn-primary{
+  color: var(--clr-bg) !important;
+  background-color: var(--clr-primary) !important;
+}
+
+.dark-mode .btn-primary:hover{
+  color: var(--clr-bg) !important;
+  background-color: white !important;
+  border-color: #3db5c4;
+}
+
 .project-card-view:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;

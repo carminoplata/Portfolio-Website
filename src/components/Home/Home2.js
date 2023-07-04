@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/Avatar.png";
+import myImg from "../../Assets/carmine.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -22,28 +22,32 @@ function Home2() {
             <p className="home-about-body" data-aos="fade-up">
               <br />
               I'm a <i className="primary-header">
-                Self-Taught Web Developer
+                Polyglot Software Engineer
               </i>{" "}
-              who loves solving problems and building Websites.
+              specialized in <i className="primary-header">web, multimedia and 
+              embedded development.</i>
               <br />
-              <br />I am passionate about{" "}
-              <i className="primary-header">technologies</i> and love to learn
-              new things.
+              <br />I possess a true <i className="primary-header">entrepreneurial spirit</i>, always seeking to solve real-life problems 
+              by leveraging cutting-edge technologies, while prioritizing user needs above all else.{" "}
               <br />
-              <br />I am more interested in building new
-              <i>
-                <i className="primary-header">Web Technologies and Products.</i>
-              </i>
+              <br />My motto is: <i> to build a disruptive product, you must be its first user.</i><br />
+              With this state of mind, I gain valuable insights that speed up my development process and 
+              lead to truly impactful solutions.
               <br />
-              <br />I always apply my experience in developing products with{" "}
-              <i className="primary-header">Node.js</i> and Modern Javascript
-              Library and Framework like
-              <i className="primary-header"> React.js.</i>
+              <br />I'm dedicated to expanding my knowledge in{" "}
+              <i className="primary-header">AI</i> particularly in{" "}
+              <i className="primary-header">NLP</i>
               <br />
               <br />
-              Currently expanding my portfolio by building more{" "}
-              <i className="primary-header">projects </i>projects that I can add
-              here.
+              Outside of work, I'm a sports enthusiast, challenging myself with{" "}
+              <i className="primary-header">Brazilian Jiu-Jitsu</i>
+              <br />
+              <br />
+              I'm passionate about combining my technical expertise, entrepreneurial mindset, 
+              and user-centric design to help create groundbreaking products.
+              <br />
+              <br />
+              Together,  <b><i className="primary-header">let's build the future.</i></b>
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -66,7 +70,7 @@ function Home2() {
             <ul className="home-about-social-links" data-aos="fade-up">
               <li className="social-icons">
                 <a
-                  href="https://github.com/Rahuljha4171"
+                  href="https://github.com/carminoplata"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -75,7 +79,7 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
+              <li className="social-icons" hidden>
                 <a
                   href="https://twitter.com/Rahuljha4171"
                   target="_blank"
@@ -88,7 +92,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="mailto:rahuljha4171@outlook.com"
+                  href="mailto:carmine.sacco91@icloud.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -99,7 +103,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/Rahuljha4171/"
+                  href="https://www.linkedin.com/in/carmine-sacco/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -110,7 +114,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/dead.programmer/"
+                  href="https://www.instagram.com/carminoplata/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
