@@ -2,18 +2,6 @@
   Carmine Sacco | Portfolio Website<br/>
   <a href="https://www.rahuljha.tech/" target="_blank">csacco.eu</a>
 </h2>
-<div align="center" hidden>
-  <img alt="Demo" src="./Images/readme_img.png"  />
-</div>
-
-<br/>
-
-<div align="center" hidden>
-
-![GitHub Repo stars](https://img.shields.io/github/stars/rahuljha4171/Portfolio-Website?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/rahuljha4171/Portfolio-Website?color=red&logo=github&style=for-the-badge)
-
-</div>
 
 ## Requirements
 
