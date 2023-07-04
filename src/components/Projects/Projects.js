@@ -11,6 +11,7 @@ import Toothpic from "../../Assets/Projects/toothpic.png";
 import Art from "../../Assets/Projects/art.jpg";
 //import Marelli from "../../Assets/Projects/marelli.png";
 import Portfolio from "../../Assets/Projects/Portfolio.png";
+import ImageScraper from "../../Assets/Projects/imagescraper.svg";
 
 import "./project.css";
 
@@ -53,7 +54,7 @@ function Projects() {
           </Col>
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
-              imgPath={Portfolio}
+              imgPath={ImageScraper}
               title="Image Scraper"
               description="Python Module for the collection of images with a particular object via Bing API"
               link="https://github.com/carminoplata/imagescraper"/>

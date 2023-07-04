@@ -1,6 +1,6 @@
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 50px !important;
   padding-bottom: 30px !important;
   background-color: var(--clr-bg) !important;
 }
@@ -28,6 +28,11 @@
   box-shadow: var(--shadow) !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+}
+
+.project-card-view img {
+  width: 80%;
+  margin: auto;
 }
 
 .dark-mode .project-card-view{
