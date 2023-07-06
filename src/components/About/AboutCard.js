@@ -13,7 +13,7 @@ function AboutCard() {
             <br />He is an innovator with a strong passion for the technology.<br />
             He is always looking for new projects to support with his expertise built in startups and 
             international companies. <br />
-            Do you want to get more about him? Take a look at his <a href="/resume">resume</a>
+            Do you want to get more about him? Take a look at his <a id="linkResume" href="/resume">resume</a>
             <br />
             <br />
             In addition to tech, he loves:
@@ -41,7 +41,7 @@ function AboutCard() {
             Are you a manager in an international company with goal to speed up your processes?
           </p>
         </blockquote>
-        <Button href="https://calendly.com/carminesacco/30min">Join Carmine for a virtual coffee</Button>
+        <Button id="btnCalendar" href="https://calendly.com/carminesacco/30min">Join Carmine for a virtual coffee</Button>
       </Card.Body>
     </Card>
   );

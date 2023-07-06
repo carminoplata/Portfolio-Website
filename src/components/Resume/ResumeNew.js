@@ -28,6 +28,7 @@ function ResumeNew() {
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
+            id="btnDownload"
             variant="primary"
             href={CS_Resume}
             target="_blank"
