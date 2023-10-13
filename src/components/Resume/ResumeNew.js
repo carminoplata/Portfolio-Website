@@ -7,11 +7,17 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "./resume.css";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import CS_Resume from '../../Assets/CS_Resume.pdf';
+import MyPresentation from '../../Assets/MyPresentation.pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const [numPages, setNumPages] = useState(0);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -21,8 +27,12 @@ function ResumeNew() {
     <div>
       <Container fluid className="resume-section">
         <Row className="resume">
-          <Document file={CS_Resume} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          <Document file={MyPresentation} className="d-flex justify-content-center"
+            onLoadSuccess={onDocumentLoadSuccess}>
+            {/*<Page pageNumber={pageNumber} scale={width > 786 ? 1.7 : 0.6} />*/}
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+            ))}
           </Document>
         </Row>
 
