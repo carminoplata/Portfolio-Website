@@ -12,6 +12,7 @@ import Art from "../../Assets/Projects/art.jpg";
 //import Marelli from "../../Assets/Projects/marelli.png";
 import Portfolio from "../../Assets/Projects/Portfolio.png";
 import ImageScraper from "../../Assets/Projects/imagescraper.svg";
+import Codebase from "../../Assets/Projects/MyCodebase.svg";
 
 import "./project.css";
 
@@ -33,7 +34,6 @@ function Projects() {
               demoLink="https://ecart.onrender.com/"
             />
           </Col>
-
           <Col md={6} lg={4} className="project-card" hidden>
             <ProjectCard
               imgPath={Portfolio}
@@ -58,6 +58,13 @@ function Projects() {
               title="Image Scraper"
               description="Python Module for the collection of images with a particular object via Bing API"
               link="https://github.com/carminoplata/imagescraper"/>
+          </Col>
+          <Col md={6} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={Codebase}
+              title="Codebase"
+              description="A set of sample apps and useful tools in the most used programming languages: C++, Angular"
+              link="https://github.com/carminoplata/codebase"/>
           </Col>
           <Col md={6} lg={4} className="project-card" hidden>
             <ProjectCard
