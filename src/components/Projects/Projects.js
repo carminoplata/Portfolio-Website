@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import ScrollToTop from "../scrollToTop/ScrollToTop";
 import ProjectCard from "./ProjectCards";
 
 import PrivateChat from "../../Assets/Projects/PrivateChat.png";
@@ -8,18 +8,18 @@ import Portfolio from "../../Assets/Projects/Portfolio.png";
 import Ecart from "../../Assets/Projects/ecart.png";
 import ExpenseTracker from "../../Assets/Projects/ExpenseTracker.png";
 
-import "./project.css";
+import styles from '../../styles/Projects.module.css';
 
-function Projects() {
+export default function Projects() {
   return (
-    <Container fluid className="project-section">
+    <Container fluid className={styles.project-section}>
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="Fluorescent-Blue">Works </strong>
+        <h1 className={styles.project-heading}>
+          My Recent <strong className={styles.Fluorescent-Blue}>Works </strong>
         </h1>
         <p>Here are a few projects I've worked on recently.</p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={6} lg={4} className="project-card">
+          <Col md={6} lg={4} className={styles.project-card}>
             <ProjectCard
               imgPath={Ecart}
               title="E Cart"
@@ -29,7 +29,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={6} lg={4} className="project-card">
+          <Col md={6} lg={4} className={styles.project-card}>
             <ProjectCard
               imgPath={Portfolio}
               title="Portfolio Website"
@@ -38,7 +38,7 @@ function Projects() {
               demoLink="https://rahuljha.tech/"
             />
           </Col>
-          <Col md={6} lg={4} className="project-card">
+          <Col md={6} lg={4} className={styles.project-card}>
             <ProjectCard
               imgPath={PrivateChat}
               title="Private Chat"
@@ -48,7 +48,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={6} lg={4} className="project-card">
+          <Col md={6} lg={4} className={styles.project-card}>
             <ProjectCard
               imgPath={ExpenseTracker}
               title="Expense Tracker"
@@ -63,5 +63,3 @@ function Projects() {
     </Container>
   );
 }
-
-export default Projects;

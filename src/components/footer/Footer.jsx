@@ -7,22 +7,22 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import "./footer.css";
+import styles from '../../styles/Footer.module.css';
 
 function Footer() {
   return (
-    <Container fluid className="footer">
+    <Container fluid className={styles.footer}>
       <Row>
-        <Col md="4" className="footer-copywright"></Col>
-        <Col md="4" className="footer-copywright">
+        <Col md="4" className={styles.footer-copywright}></Col>
+        <Col md="4" className={styles.footer-copywright}>
           <span>
             Designed and Developed by{" "}
-            <i className="primary-header">Rahul Jha</i>
+            <i className={styles.primary-header}>Rahul Jha</i>
           </span>
         </Col>
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
+        <Col md="4" className={styles.footer-body}>
+          <ul className={styles.footer-icons}>
+            <li className={styles.social-icons}>
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="github"
@@ -34,7 +34,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">
+            <li className={styles.social-icons}>
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="twitter"
@@ -46,7 +46,7 @@ function Footer() {
                 <AiOutlineTwitter />
               </a>
             </li>
-            <li className="social-icons">
+            <li className={styles.social-icons}>
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="email"
@@ -58,7 +58,7 @@ function Footer() {
                 <AiOutlineMail />
               </a>
             </li>
-            <li className="social-icons">
+            <li className={styles.social-icons}>
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="linkedin"
@@ -70,7 +70,7 @@ function Footer() {
                 <FaLinkedinIn />
               </a>
             </li>
-            <li className="social-icons">
+            <li className={styles.social-icons}>
               <a
                 style={{ color: `var(--clr-primary)` }}
                 className="instagram"

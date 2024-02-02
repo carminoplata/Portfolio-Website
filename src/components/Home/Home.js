@@ -1,32 +1,32 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeIcon from "../../Assets/homeicons.svg";
-import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import ScrollToTop from "../scrollToTop/ScrollToTop";
 
 import Home2 from "./Home2";
 import Type from "./Type";
-import "./home.css";
+import styles from '../../styles/Home.module.css';
 
-function Home() {
+export default function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
-        <Container className="home-content">
+      <Container fluid className={styles.home-section} id="home">
+        <Container className={styles.home-content}>
           <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+            <Col md={7} className={styles.home-header}>
+              <h1 style={{ paddingBottom: 15 }} className={styles.heading}>
                 Hi There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
+                <span className={styles.wave} role="img" aria-labelledby="wave">
                   👋🏻
                 </span>{" "}
                 I'M
               </h1>
 
-              <h1 className="heading-name">
-                <strong className="main-name"> Rahul Jha</strong>
+              <h1 className={styles.headingname}>
+                <strong className={styles.mainname}> Rahul Jha</strong>
               </h1>
 
-              <div style={{ padding: 30 }} className="type">
+              <div style={{ padding: 30 }} className={styles.type}>
                 <Type />
               </div>
             </Col>
@@ -35,7 +35,7 @@ function Home() {
               <img
                 src={homeIcon}
                 alt="home pic"
-                className="img-fluid"
+                className={styles.img-fluid}
                 style={{ paddingTop: 50 }}
               />
             </Col>
@@ -47,5 +47,3 @@ function Home() {
     </section>
   );
 }
-
-export default Home;

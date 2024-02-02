@@ -7,44 +7,49 @@ import Container from "react-bootstrap/Container";
 import logoLight from "../../Assets/logoLight.png";
 import logoDark from "../../Assets/logoDark.png";
 
-import { Link } from "react-router-dom";
-import "./navbar.css";
+import Link from 'next/link';
+import styles from '../../styles/Navbar.module.css';
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
   const [{ themename, toggeltheme }] = useContext(ThemeContext);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
-    }
-  }
   useEffect(() => {
     const body = document.body;
-    const toggle = document.querySelector(".toggle-inner");
+    const toggle = document.querySelector(".toggleInner");
+    if(toggle==null){
+      console.log("Not found class toggleInner");
+    }
     if (themename === "dark") {
       body.classList.add("dark-mode");
-      toggle.classList.add("toggle-active");
+      toggle.classList.add("toggleActive");
     } else {
       body.classList.remove("dark-mode");
-      toggle.classList.remove("toggle-active");
+      toggle.classList.remove("toggleActive");
     }
-  }, [themename]);
 
-  window.addEventListener("scroll", scrollHandler);
+    const onScroll = function () {
+      if (window.scrollY >= 20) {
+        updateNavbar(true);
+      } else {
+        updateNavbar(false);
+      }
+    }
+
+    window.addEventListener("scroll", onScroll);
+
+  }, [themename]);
 
   return (
     <Navbar
       expanded={expand}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      className={navColour ? "sticky" : "navbar" }
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand href="#home" className="d-flex">
           <img
             src={themename === "light" ? logoDark : logoLight}
             className="img-fluid logo"
@@ -52,7 +57,6 @@ function NavBar() {
             style={{width: "48", height: "40"}}
           />
         </Navbar.Brand>
-
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -68,13 +72,30 @@ function NavBar() {
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
-            <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                Home
-              </Nav.Link>
-            </Nav.Item>
+            <Link href="/" passHref>
+              <Nav.Item onClick={() => updateExpanded(false)}>
+                  Home
+              </Nav.Item>
+            </Link>
+            <Link href="/about" passHref>
+              <Nav.Item onClick={() => updateExpanded(false)}>
+                  About
+              </Nav.Item>
+            </Link>
+            <Link href="/projects" passHref>
+              <Nav.Item onClick={() => updateExpanded(false)}>
+                  Projects
+              </Nav.Item>
+            </Link>
+            <Link href="/resume" passHref>
+              <Nav.Item onClick={() => updateExpanded(false)}>
+                  Resume
+              </Nav.Item>
+            </Link>
+          </Nav>
+            
 
-            <Nav.Item>
+           {/* <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/about"
@@ -82,7 +103,7 @@ function NavBar() {
               >
                 About
               </Nav.Link>
-            </Nav.Item>
+        </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
@@ -113,12 +134,12 @@ function NavBar() {
                 Blogs
               </Nav.Link>
             </Nav.Item>
-          </Nav>
+          </Nav>*/}
 
           <Nav.Item>
-            <div className="theme-switch">
-              <div id="toggle" onClick={toggeltheme}>
-                <div className="toggle-inner" />
+            <div className={styles.themeSwitch}>
+              <div id="toggle" onClick={styles.toggleTheme}>
+                <div className="toggleInner"/>
               </div>
             </div>
           </Nav.Item>

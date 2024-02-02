@@ -5,11 +5,11 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
-import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import ScrollToTop from "../scrollToTop/ScrollToTop";
 
 import "./about.css";
 
-function About() {
+export default function About() {
   return (
     <Container fluid className="about-section">
       <Container>
@@ -67,4 +67,4 @@ function About() {
   );
 }
 
-export default About;
+

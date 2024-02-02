@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import "./scroll.css";
+import styles from '../../styles/Scroll.module.css';
 import { AiOutlineArrowUp } from "react-icons/ai";
 
 const ScrollToTop = () => {
@@ -26,7 +26,7 @@ const ScrollToTop = () => {
   return (
     <div className="App">
       {backToTopButtom && (
-        <button className="scroll-up" onClick={scrollUp}>
+        <button className={styles.scroll-up} onClick={scrollUp}>
           <AiOutlineArrowUp />
         </button>
       )}

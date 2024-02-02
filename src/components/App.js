@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-import Preloader from "../src/components/preloader/Preloader";
-import Navbar from "./components/navbar/Navbar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Footer from "./components/footer/Footer";
-import Resume from "./components/Resume/ResumeNew";
-import { ThemeContext } from "./Context/theme";
+import Link from 'next/link';
+import Preloader from "./preloader/Preloader";
+import Navbar from "./navbar/Navbar";
+import Home from "./home/Home";
+//import About from "./about/about";
+import Projects from "./projects/Projects";
+import Footer from "./footer/Footer";
+import Resume from "./resume/ResumeNew";
+import { ThemeContext } from "../Context/theme";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
 } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import "./App.css";
+import ScrollToTop from "./scrollToTop/ScrollToTop";
+import styles from '../styles/App.module.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -30,6 +31,15 @@ function App() {
   }, []);
 
   return (
+    <div className={`${themename} app`}>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+      </div>
+    </div>
+  )
+ /* return (
     <div className={`${themename} app`}>
       <Router>
         <Preloader load={load} />
@@ -47,7 +57,7 @@ function App() {
         </div>
       </Router>
     </div>
-  );
+  );*/
 }
 
 export default App;
